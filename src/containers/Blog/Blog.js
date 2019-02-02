@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import './Blog.css';
 
 import Posts from "./Posts/Posts";
+import NewPost from "./NewPost/NewPost";
 
 class Blog extends Component {
 
@@ -25,6 +26,7 @@ class Blog extends Component {
                 {/* component property references a function or class component, this is the prefered method of loading components
                     although we can still use render to load components as well. */}
                 <Route path="/" exact component={Posts}/>
+                <Route path="/new-post" component={NewPost}/>
             </div>
         );
     }
