@@ -20,8 +20,11 @@ class Blog extends Component {
                 {/* Painful commenting in JSX */}
                 {/* Route is just another component which gets replaced with the JSX content inside render */}
                 {/* Without exact, the path is used as prefix, so both / and /new-posts matches the route */}
-                <Route path="/" exact render={() => <h1>Home</h1>}/>
+                {/* <Route path="/" exact render={() => <h1>Home</h1>}/> */}
                 
+                {/* component property references a function or class component, this is the prefered method of loading components
+                    although we can still use render to load components as well. */}
+                <Route path="/" exact component={Posts}/>
             </div>
         );
     }
