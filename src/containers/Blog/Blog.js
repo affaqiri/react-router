@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Route } from "react-router-dom";
 import './Blog.css';
 
 import Posts from "./Posts/Posts";
@@ -17,7 +17,11 @@ class Blog extends Component {
                         </ul>
                     </nav>
                 </header>
-                <Posts />
+                {/* Painful commenting in JSX */}
+                {/* Route is just another component which gets replaced with the JSX content inside render */}
+                {/* Without exact, the path is used as prefix, so both / and /new-posts matches the route */}
+                <Route path="/" exact render={() => <h1>Home</h1>}/>
+                
             </div>
         );
     }
